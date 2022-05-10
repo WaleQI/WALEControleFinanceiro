@@ -1,0 +1,19 @@
+{
+    "name": "eriqu/wale",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Eriqu\\Wale\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "S0lturn3",
+            "email": "erickzcarvalho25@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "twbs/bootstrap": "5.1.3"
+    }
+}
