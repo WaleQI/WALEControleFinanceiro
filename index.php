@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.css">
-        <script src="vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="src/style.css">
-        <title>Perfis</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/twbs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/styles/login.css">
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     
+    <title>Login</title>
+</head>
     <body>
-        <div class="main-wrapper">
-            <div class="profiles-container row">
-                <div class="profile-collumn col-md-3 mb-2">
-                    <div class="profile-option profile d-flex flex-column align-items-center justify-content-between">
-                        <div id="profile1" class="profile-image"></div>
-                        <div id="profile1-name" class="profile-name">Perfil 1</div>
-                    </div>
-                </div>
-
-                <div class="profile-collumn col-md-3 mb-2">
-                    <div class="profile-option profile d-flex flex-column align-items-center justify-content-between">
-                        <div id="profile2" class="profile-image"></div>
-                        <div id="profile2-name" class="profile-name">Perfil 2</div>
-                    </div>
-                </div>
-
-                <div class="profile-collumn col-md-3 mb-2">
-                    <div class="profile-option profile d-flex flex-column align-items-center justify-content-between">
-                        <div id="profile3" class="profile-image"></div>
-                        <div id="profile3-name" class="profile-name">Perfil 3</div>
-                    </div>
-                </div>
-
-                <div class="profile-collumn col-md-3 mb-2">
-                    <div class="profile-option profile d-flex flex-column align-items-center justify-content-between">
-                        <div id="profile4" class="profile-image"></div>
-                        <div id="profile4-name" class="profile-name">Perfil 4</div>
-                    </div>
-                </div>
+        <div class="main-login-wrapper h-100 row">
+            <div class="left-column col-7 d-none d-lg-block">
+                <div class="left-column-content"></div>
             </div>
 
-            <div class="add-profile-container">
-                <div class="add-profile-option">
-                    <a type="button" data-bs-toggle="modal" data-bs-target="#addUserModal">ADICIONAR PERFIS</a>
+            <div class="right-column col-lg-5 d-flex align-items-center justify-content-center">
+                <div class="login-card row w-75 px-5 d-flex flex-column align-items-center justify-content-center">
+                    <h1 class="login-card-title col-12 text-center m-0 fw-bold">LOGIN</h1>
+                    <form action="login.php" class="mt-3">
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <label for="inputUserName">Email</label>
+                                <input type="email" id="inputUserName" class="form-control" placeholder="Digite seu email">
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label for="inputUserPsw">Senha</label>
+                                <input type="password" id="inputUserPsw" class="form-control" placeholder="Digite sua senha">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="action-buttons row col-md-12 my-3">
+                        <div class="col-sm-6 p-0 pe-sm-3 mb-2">
+                            <a href="#" class="btn button two w-100 py-3 fw-bold border-0">LOGIN</a>
+                        </div>
+
+                        <div class="col-sm-6 p-0 ps-sm-3 mb-2">
+                            <a href="#" type="button" class="btn button two w-100 py-3 fw-bold border-0" data-bs-toggle="modal" data-bs-target="#addUserModal">CADASTRAR</a>
+                        </div>
+
+                        <!-- <div class="login-action-btn col-sm-6 p-0 pe-sm-3 mb-2">
+                            <button class="btn login-btn w-100 py-3 fw-bold fs-6 border-0">LOGIN</button>
+                        </div>
+                        <div class="signin-action-btn col-sm-6 p-0 ps-sm-3 mb-2">
+                            <button class="btn signin-btn w-100 py-3 fw-bold fs-6 border-0">CADASTRAR</button>
+                        </div> -->
+
+                        <div class="forgot-psw-action col-12 mt-3 text-center">
+                            <a href="#" class="forgot-password-text text-decoration-none">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-data text-center row mt-3 d-flex flex-column align-items-center justify-content-center">
+                        <p class="credits-text col-12">Desenvolvido por <span class="wale-sa fw-bold">WALE S/A℠</span> <br> Todos os direitos reservados</p>
+                        <div class="contact-links col-10 d-flex justify-content-evenly">
+                            <a href="https://pt-br.facebook.com/"> <img src="src/assets/contact-icons/facebook.png" alt="Facebook"> </a>
+                            <a href="https://www.instagram.com/"> <img src="src/assets/contact-icons/instagram.png" alt="Instagram"> </a>
+                            <a href="https://www.linkedin.com/"> <img src="src/assets/contact-icons/linkedin.png" alt="LinkedIn"> </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,5 +111,8 @@
                 </div>
             </div>
         </div>
+
+        <script src="vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 </html>
