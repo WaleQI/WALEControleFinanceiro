@@ -40,7 +40,7 @@
 
                     <div class="action-buttons row col-md-12 my-3">
                         <div class="col-sm-6 p-0 pe-sm-3 mb-2">
-                            <a href="#" class="btn button two w-100 py-3 fw-bold border-0">LOGIN</a>
+                            <a href="src/perfis.php" class="btn button two w-100 py-3 fw-bold border-0">LOGIN</a>
                         </div>
 
                         <div class="col-sm-6 p-0 ps-sm-3 mb-2">
@@ -55,7 +55,7 @@
                         </div> -->
 
                         <div class="forgot-psw-action col-12 mt-3 text-center">
-                            <a href="#" class="forgot-password-text text-decoration-none">Esqueceu a senha?</a>
+                            <a href="src/connect.php" class="forgot-password-text text-decoration-none">Esqueceu a senha?</a>
                         </div>
                     </div>
 

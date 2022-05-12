@@ -1,41 +1,19 @@
 <?php
-    $guid = GUID();
+use Models\Utils\Conexao;
+require_once '../vendor/autoload.php';
 
-    function GUID() {
-        if (function_exists('com_create_guid') === true) {
-            return trim(com_create_guid(), '{}');
-        } else {
-            return sprintf('%04X%04X-%04X-%04X-%04X-%04X%04X%04X', mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(16384, 20479), mt_rand(32768, 49151), mt_rand(0, 65535), mt_rand(0, 65535), mt_rand(0, 65535));
-        }
 
-        return "{Geração de GUID falha!}";
-    }
-
-    echo "<p>O GUID é: " . $guid . "</p>";
+    // Instancia a classe de Conexão com o Banco
+    $conexao = new Conexao();
     
     #region Conexão com o banco
-    
-    $serverName = "localhost";
-    $userName = "root";
-    $password = "mDB_C0nn|";
-    $dbName = "wl_finan";
-
-    try {
-        // Cria-se um novo objeto para realizar as funções de 
-        $pdo = new PDO("mysql:host=$serverName;dbname=$dbName", $userName, $password);
+    if ($conexao->defineConnection($serverName, $userName, $password, $dbName) != false || $conexao->defineConnection($serverName, $userName, $password, $dbName) != null) {
         $query = "SELECT * FROM usuario ORDER BY usuario.NOME ASC";
-
+        $pdo = $conexao->defineConnection($serverName, $userName, $password, $dbName);
         $d = $pdo->query($query);
-
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connection succesful!";
     }
-    catch(PDOException $ex) {
-        echo "Error in connection " . $ex->getMessage();
-    }
-
+    else { }
     #endregion Conexão com o banco
-
 ?>
 
 

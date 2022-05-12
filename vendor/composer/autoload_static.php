@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit46c25e5b3b590ac168bf5cd087ee3744
 {
     public static $prefixLengthsPsr4 = array (
-        'E' => 
+        'M' => 
         array (
-            'Eriqu\\Wale\\' => 11,
+            'Models\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Eriqu\\Wale\\' => 
+        'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -22,6 +22,7 @@ class ComposerStaticInit46c25e5b3b590ac168bf5cd087ee3744
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Models\\Utils\\Conexao' => __DIR__ . '/../..' . '/src/Models/Conexao.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

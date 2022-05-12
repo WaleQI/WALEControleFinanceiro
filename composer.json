@@ -2,9 +2,8 @@
     "name": "eriqu/wale",
     "type": "project",
     "autoload": {
-        "psr-4": {
-            "Eriqu\\Wale\\": "src/"
-        }
+        "psr-4": { "Models\\": "src/" },
+        "classmap": [ "src/Models" ]
     },
     "authors": [
         {

@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Eriqu\\Wale\\' => array($baseDir . '/src'),
+    'Models\\' => array($baseDir . '/src'),
 );
