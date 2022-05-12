@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/profile-list-background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/profile-list-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -59,28 +59,28 @@ body {
 }
 
 #profile1 {
-    background-image: url("assets/profile1-avatar.png");
+    background-image: url("../assets/profile1-avatar.png");
     background-size: contain;
     transition: all .5s;
 }
 #profile1:hover { filter: brightness(150%); }
 
 #profile2 {
-    background-image: url('assets/profile2-avatar.png');
+    background-image: url('../assets/profile2-avatar.png');
     background-size: contain;
     transition: all .5s;
 }
 #profile2:hover { filter: brightness(150%); }
 
 #profile3 {
-    background-image: url('assets/profile3-avatar.png');
+    background-image: url('../assets/profile3-avatar.png');
     background-size: contain;
     transition: all .5s;
 }
 #profile3:hover { filter: brightness(150%); }
 
 #profile4 {
-    background-image: url('assets/profile4-avatar.png');
+    background-image: url('../assets/profile4-avatar.png');
     background-size: contain;
     transition: all .5s;
 }
