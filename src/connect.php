@@ -1,18 +1,14 @@
 <?php
-use Models\Utils\Conexao;
+use Models\Utils\Database;
 require_once '../vendor/autoload.php';
 
 
     // Instancia a classe de Conexão com o Banco
-    $conexao = new Conexao();
+    $conexao = new Database();
     
     #region Conexão com o banco
-    if ($conexao->defineConnection($serverName, $userName, $password, $dbName) != false || $conexao->defineConnection($serverName, $userName, $password, $dbName) != null) {
-        $query = "SELECT * FROM usuario ORDER BY usuario.NOME ASC";
-        $pdo = $conexao->defineConnection($serverName, $userName, $password, $dbName);
-        $d = $pdo->query($query);
-    }
-    else { }
+    $query = 'SELECT * FROM usuario';
+    $data = $conexao->select($query);
     #endregion Conexão com o banco
 ?>
 
@@ -42,13 +38,13 @@ require_once '../vendor/autoload.php';
                 <th class="table-dark">IS_ACTIVE</th>
             </tr>
 
-            <?php foreach($d as $data) { ?>
+            <?php foreach($data as $row) { ?>
             <tr>
-                <td class="table-dark"> <?php echo $data['USUARIOID']; ?> </td>
-                <td class="table-dark"> <?php echo $data['NOME']; ?> </td>
-                <td class="table-dark"> <?php echo $data['EMAIL']; ?> </td>
-                <td class="table-dark"> <?php echo $data['SENHA']; ?> </td>
-                <td class="table-dark"> <?php echo $data['IS_ACTIVE']; ?> </td>
+                <td class="table-dark"> <?php echo $row->USUARIOID; ?> </td>
+                <td class="table-dark"> <?php echo $row->NOME; ?> </td>
+                <td class="table-dark"> <?php echo $row->EMAIL; ?> </td>
+                <td class="table-dark"> <?php echo $row->SENHA; ?> </td>
+                <td class="table-dark"> <?php echo $row->IS_ACTIVE; ?> </td>
             </tr>
             <?php } ?>
         </table>

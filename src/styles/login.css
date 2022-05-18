@@ -128,23 +128,23 @@ body {
 /* #region MODAL ADD USERS */
 .modal-content {
     background-color: #2d2846;
+    color: #fff;
+}
+.modal-header .btn-close {
+    color: #fff;
+    background-color: #fff;
 }
 
-.add-profile-option {
-    display: grid;
-    place-items: center;
-    height: 40px;
-    width: 180px;
-
-    border-radius: 10px;
-    transition: all .5s;
-}
-.add-profile-option:hover {
-    font-size: 1.05rem;
-    background-color: rgba(255, 255, 255, 0.3);
+/* .modal-content input {
+    background-color: #b0aeba;
+    border-color: #cac9d1;
 }
 
-.modal#addUserModal .modal-content {
-    color: #000;
-}
+.modal-footer button {
+    background-color: #ebd705;
+    border-color: #b0a104;
+    color: #1a1e24;
+} */
+
+
 /* #endregion MODAL ADD USERS */

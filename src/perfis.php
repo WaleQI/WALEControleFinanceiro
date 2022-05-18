@@ -87,7 +87,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-                        <button type="button" class="btn btn-primary">SALVAR</button>
+                        <a href="connect.php" type="button" class="btn btn-primary">SALVAR</a>
                     </div>
                 </div>
             </div>

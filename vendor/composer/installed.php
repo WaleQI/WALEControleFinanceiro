@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '14aacd7fb66e7f549744faa60523b42e75fd4762',
+        'reference' => '1bf2d78449e3321ce842fc8374c92a018056dc95',
         'name' => 'eriqu/wale',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '14aacd7fb66e7f549744faa60523b42e75fd4762',
+            'reference' => '1bf2d78449e3321ce842fc8374c92a018056dc95',
             'dev_requirement' => false,
         ),
         'twbs/bootstrap' => array(
