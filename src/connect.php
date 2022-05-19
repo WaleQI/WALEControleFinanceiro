@@ -7,7 +7,7 @@ require_once '../vendor/autoload.php';
     $conexao = new Database();
     
     #region Conexão com o banco
-    $query = 'SELECT * FROM usuario';
+    $query = 'SELECT * FROM usuario WHERE IS_ACTIVE = 1';
     $data = $conexao->select($query);
     #endregion Conexão com o banco
 ?>
@@ -25,7 +25,7 @@ require_once '../vendor/autoload.php';
         <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="src/style.css">
-        <title>Tabela com usuários</title>
+        <title>Tabela com usuários | TESTE</title>
     </head>
 
     <body class="p-3">

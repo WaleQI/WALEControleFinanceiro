@@ -1,15 +1,24 @@
+/* #region VARIÁVEIS */
 :root {
-    --bg: #1a1e24;
-    --color: #ebd705;
+    /* Cores principais */
+    --main-bg: #222130;
+    --main-color: #ebd705;
+
+    /* Cores de componentes */
+    --light-input-color: #ecedee;
+    --cancel-button:  #e53935;
+
+    /* Textos */
     --font: 'Quicksand', sans-serif;
 }
+/* #endregion VARIÁVEIS */
 
 * {
     box-sizing:  border-box;
     margin: 0;
     padding: 0;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--font)
 }
 
 body {
@@ -18,7 +27,7 @@ body {
 
     overflow-x: hidden;
     color: #FFF;
-    background-color: #2d2846;
+    background-color: var(--main-bg);
 }
 
 .left-column {
@@ -30,121 +39,65 @@ body {
 .left-column { padding: 0; }
 .right-column { padding: 0; }
 
+
 /* #region LOGIN CARD */
-.login-card-title { color: #ebd705; letter-spacing: 5px; }
+.login-card-title { color: var(--main-color); letter-spacing: 5px; }
+
 
 /* #region ACTION BUTTONS */
 .login-btn {
     letter-spacing: 2px;
     color: #2b134b;
-    background-color: #ebd705;
+    background-color: var(--main-color);
 
-    box-shadow: 0px 10px 40px -12px black;
+    box-shadow: -2px 2px 1px 1px #070618;
     transition: all .5s;
 }
 .signin-btn {
     letter-spacing: 2px;
     color: #2b134b;
-    background-color: #ebd705;
+    background-color: var(--main-color);
 
-    box-shadow: 0px 10px 40px -12px black;
+    box-shadow: -2px 2px 1px 1px #070618;
     transition: all .5s;
 }
 
-/* .login-btn:hover, .signin-btn:hover {
-    transform: scale(1.05);
-    border-radius: 15px;
-    background-color: #ffef43;
-} */
-
-.forgot-password-text { color: #ebd705; transition: all .5s; }
+.forgot-password-text { color: var(--main-color); transition: all .5s; }
 .forgot-password-text:hover { color: #fff695; }
 /* #endregion ACTION BUTTONS */
 
-
-/* #region CUSTOM BUTTON */
-.button {
-    display: block;
-    position: relative;
-    color: #2b134b;
-    text-align: center;
-    background-color: #ebd705;
-    font-size: 14px;
-}
-
-.button.two {
-    background-repeat: no-repeat;
-    background-position: -145px -145px, 0 0;
-    
-    background-image: -webkit-linear-gradient(
-      top left,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 37%,
-      rgba(255, 255, 255, 0.8) 45%,
-      rgba(255, 255, 255, 0.0) 50%
-    );
-    background-image: -moz-linear-gradient(
-      0 0,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 37%,
-      rgba(255, 255, 255, 0.8) 45%,
-      rgba(255, 255, 255, 0.0) 50%
-    );    
-    background-image: -o-linear-gradient(
-      0 0,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 37%,
-      rgba(255, 255, 255, 0.8) 45%,
-      rgba(255, 255, 255, 0.0) 50%
-    );
-    background-image: linear-gradient(
-      0 0,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 37%,
-      rgba(255, 255, 255, 0.8) 45%,
-      rgba(255, 255, 255, 0.0) 50%
-    );
-    
-    -moz-background-size: 250% 250%, 100% 100%;
-         background-size: 250% 250%, 100% 100%;
-    
-    -webkit-transition: background-position 0s ease;
-       -moz-transition: background-position 0s ease;       
-         -o-transition: background-position 0s ease;
-            transition: background-position 0s ease;
-  }
-  
-  .button.two:hover {
-    background-position: 0 0, 0 0;
-    
-    -webkit-transition-duration: 0.5s;
-       -moz-transition-duration: 0.5s;
-            transition-duration: 0.5s;
-  }
-/* #endregion CUSTOM BUTTON */
 
 /* #endregion LOGIN CARD */
 
 /* #region MODAL ADD USERS */
 .modal-content {
-    background-color: #2d2846;
+    background-color:  #222130;
     color: #fff;
 }
 .modal-header .btn-close {
     color: #fff;
-    background-color: #fff;
+    background-color: #444256;
 }
 
-/* .modal-content input {
-    background-color: #b0aeba;
-    border-color: #cac9d1;
+.modal .modal-cancel-btn {
+    background-color: var(--cancel-button);
+    letter-spacing: 2px;
+    color: #150825;
+}
+.modal .modal-save-btn {
+    background-color: var(--main-color);
+    letter-spacing: 2px;
+    color: #150825;
 }
 
-.modal-footer button {
-    background-color: #ebd705;
-    border-color: #b0a104;
-    color: #1a1e24;
-} */
-
-
+.modal-input {
+    background-color: #222130;
+    color: #fff;
+    box-shadow: 2px 2px 3px 3px #0504113f inset;
+    border-color: #0706183f;
+}
+.modal-input:focus {
+    background-color: #444256;
+    color: #fff;
+}
 /* #endregion MODAL ADD USERS */

@@ -7,10 +7,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.css">
-        <link rel="stylesheet" href="styles/style.css">
-        <title>Perfis</title>
+        <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../styles/style.css">
+        <title>Seleção de perfil</title>
     </head>
     
     <body>
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <!-- MODAL DE ADICIONAR USUÁRIO -->
+        #region MODAL DE ADICIONAR PERFIL
         <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -87,13 +87,14 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-                        <a href="connect.php" type="button" class="btn btn-primary">SALVAR</a>
+                        <a href="../connect.php" type="button" class="btn btn-primary">SALVAR</a>
                     </div>
                 </div>
             </div>
         </div>
+        #endregion MODAL DE ADICIONAR PERFIL
 
-        <script src="../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 </html>
