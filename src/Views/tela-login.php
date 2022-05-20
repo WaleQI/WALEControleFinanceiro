@@ -66,7 +66,7 @@
             </div>
         </div>
 
-        #region MODAL DE ADICIONAR USUÁRIO
+        <!-- #region MODAL DE ADICIONAR USUÁRIO -->
         <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
@@ -75,33 +75,76 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="inserrirperfil.php">
+                        <form action="../actions/registrar-usuario.php" method="POST">
                             <div class="row">
                                 <div class="mb-3 col-sm-12 d-flex flex-column">
-                                    <label for="newUserName">Nome</label>
+                                    <label for="newUserName">Nome <span style="color: red;">*</span> </label>
                                     <input type="text" class="form-control modal-input" name="newUserName" id="newUserName" placeholder="Marcos da Silva de Lemos, Família Silva, etc" required>
                                 </div>
 
                                 <div class="mb-3 col-sm-6 d-flex flex-column">
-                                    <label for="newUserEmail">Email</label>
+                                    <label for="newUserEmail">Email <span style="color: red;">*</span> </label>
                                     <input type="email" class="form-control modal-input" name="newUserEmail" id="newUserEmail" placeholder="marcosdasilva4@outlook.com" required>
                                 </div>
 
                                 <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Senha</label>
+                                    <label for="newUserPassword">Senha <span style="color: red;">*</span> </label>
                                     <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha12345" required>
                                 </div>
                             </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn modal-cancel-btn fw-bold" data-bs-dismiss="modal">CANCELAR</button>
+                                <button type="submit" class="btn modal-save-btn fw-bold">SALVAR</button>
+                            </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn modal-cancel-btn fw-bold" data-bs-dismiss="modal">CANCELAR</button>
-                        <button type="button" class="btn modal-save-btn fw-bold">SALVAR</button>
                     </div>
                 </div>
             </div>
         </div>
-        #endregion MODAL DE ADICIONAR USUÁRIO
+        <!-- #endregion MODAL DE ADICIONAR USUÁRIO -->
+
+        <!-- #region MODAL DE ATUALIZAR SENHA DO USUÁRIO -->
+        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addUserModalTitle">ATUALIZAR SENHA DO USUÁRIO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../actions/atualizar-senha-usuario.php" method="POST">
+                            <div class="row">
+                                <div class="mb-3 col-sm-12 d-flex flex-column">
+                                    <label for="newUserName">Nome <span style="color: red;">*</span> </label>
+                                    <input type="text" class="form-control modal-input" name="newUserName" id="newUserName" placeholder="Nome da conta que quer alterar a senha" required>
+                                </div>
+
+                                <div class="mb-3 col-sm-6 d-flex flex-column">
+                                    <label for="newUserEmail">Email <span style="color: red;">*</span> </label>
+                                    <input type="email" class="form-control modal-input" name="newUserEmail" id="newUserEmail" placeholder="Nome da conta que quer alterar a senha" required>
+                                </div>
+
+                                <div class="mb-3 col-6">
+                                    <label for="newUserPassword">Senha <span style="color: red;">*</span> </label>
+                                    <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha antiga" required>
+                                </div>
+                                <div class="mb-3 col-6">
+                                    <label for="newUserPassword">Nova senha</label>
+                                    <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha nova" required>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn modal-cancel-btn fw-bold" data-bs-dismiss="modal">CANCELAR</button>
+                                <button type="submit" class="btn modal-save-btn fw-bold">SALVAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion MODAL DE ATUALIZAR SENHA DO USUÁRIO -->
 
         <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>

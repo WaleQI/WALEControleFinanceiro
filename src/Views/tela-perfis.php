@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        #region MODAL DE ADICIONAR PERFIL
+        <!-- #region MODAL DE ADICIONAR PERFIL -->
         <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -92,7 +92,7 @@
                 </div>
             </div>
         </div>
-        #endregion MODAL DE ADICIONAR PERFIL
+        <!-- #endregion MODAL DE ADICIONAR PERFIL -->
 
         <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
         <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
