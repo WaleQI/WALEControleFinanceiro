@@ -1,13 +1,37 @@
+/* #region VARIÁVEIS */
+:root {
+    /* Cores de fundo */
+    --dark-details: #15162f;            /* Letras e detalhes mais escuros */
+    --main-bg: #222130;                 /* Principal cor de background, usada na maior parte do projeto */
+    --lighter-background: #333143;      /* Cor mais clara para background, detalhes ou diferenciação */
+    --lighter-plus: #444356;            /* Cor ainda mais clara, para ênfase, detalhes ou diferenciação */
+    
+    /* Cores principais */
+    --main-color: #ffd957;              /* Cor principal do projeto, usada em maior parte dos componentes e cores */
+    --main-details-color: #ebd705;      /* Cor principal mais vívida, usada para diferenciação ou estilo específico */
+
+    /* Cores de componentes */
+    --light-input-color: #ecedee;
+    --red-component:  #e53935;         /* Usada em componentes vermelhos */
+    --green-component: #08af25;        /* Usada em componentes verdes */
+
+    --alternative-green: #14c870;      /* Cor alternativa para o verde */
+
+    /* Fonte */
+    --main-font: 'Quicksand', sans-serif;
+}
+/* #endregion VARIÁVEIS */
+
 * {
     box-sizing:  border-box;
     margin: 0;
     padding: 0;
 
-    font-family: 'Quicksand', sans-serif;
+    font-family: var(--main-font);
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/profile-list-background.jpg');
+    background-color: var(--main-bg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
@@ -15,7 +39,7 @@ body {
 
     padding-top: 1rem;
     overflow-x: hidden;
-    color: #FFF;
+    color: var(--main-color);
 }
 
 .main-wrapper {
@@ -42,7 +66,7 @@ body {
 .profile-image {
     width: 200px;
     height: 200px;
-    border: 1px solid #FFF;
+    border: 2px solid var(--main-color);
     border-radius: 50%;
 
     display: grid;
@@ -59,29 +83,30 @@ body {
 }
 
 #profile1 {
-    background-image: url("../assets/profile1-avatar.png");
-    background-size: contain;
+    background-image: url("../assets/perfil1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all .5s;
 }
 #profile1:hover { filter: brightness(150%); }
 
 #profile2 {
-    background-image: url('../assets/profile2-avatar.png');
-    background-size: contain;
+    background-image: url('../assets/perfil3.jpg');
+    background-size: cover;
     transition: all .5s;
 }
 #profile2:hover { filter: brightness(150%); }
 
 #profile3 {
-    background-image: url('../assets/profile3-avatar.png');
-    background-size: contain;
+    background-image: url('../assets/perfil4.jpg');
+    background-size: cover;
     transition: all .5s;
 }
 #profile3:hover { filter: brightness(150%); }
 
 #profile4 {
-    background-image: url('../assets/profile4-avatar.png');
-    background-size: contain;
+    background-image: url('../assets/perfil5.jpg');
+    background-size: cover;
     transition: all .5s;
 }
 #profile4:hover { filter: brightness(150%); }

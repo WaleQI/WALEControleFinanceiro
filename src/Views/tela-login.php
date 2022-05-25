@@ -49,7 +49,7 @@
                             </div>
 
                             <div class="forgot-psw-action col-12 mt-3 text-center">
-                                <a href="connect.php" class="forgot-password-text text-decoration-none">Esqueceu a senha?</a>
+                                <a class="forgot-password-text text-decoration-none" data-bs-toggle="modal" data-bs-target="#updatePasswordModal">Esqueceu a senha?</a>
                             </div>
                         </div>
                     </form>
@@ -57,9 +57,10 @@
                     <div class="footer-data text-center row mt-3 d-flex flex-column align-items-center justify-content-center">
                         <p class="credits-text col-12">Desenvolvido por <span class="wale-sa fw-bold">WALE S/A℠</span> <br> Todos os direitos reservados</p>
                         <div class="contact-links col-10 d-flex justify-content-evenly">
-                            <a href="https://pt-br.facebook.com/"> <img src="../assets/contact-icons/facebook.png" alt="Facebook"> </a>
-                            <a href="https://www.instagram.com/"> <img src="../assets/contact-icons/instagram.png" alt="Instagram"> </a>
-                            <a href="https://www.linkedin.com/"> <img src="../assets/contact-icons/linkedin.png" alt="LinkedIn"> </a>
+                            <a title="GitHub" href="https://github.com/WaleQI/WALEControleFinanceiro"> <img src="../assets/icons/github24.png" alt="Facebook"> </a>
+                            <a title="Facebook" href="https://pt-br.facebook.com/"> <img src="../assets/icons/facebook24.png" alt="Facebook"> </a>
+                            <a title="Instagram" href="https://www.instagram.com/"> <img src="../assets/icons/instagram24.png" alt="Instagram"> </a>
+                            <a title="LinkedIn" href="https://www.linkedin.com/"> <img src="../assets/icons/linkedin24.png" alt="LinkedIn"> </a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@
         </div>
 
         <!-- #region MODAL DE ADICIONAR USUÁRIO -->
-        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModal" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -78,17 +79,17 @@
                         <form action="../actions/registrar-usuario.php" method="POST">
                             <div class="row">
                                 <div class="mb-3 col-sm-12 d-flex flex-column">
-                                    <label for="newUserName">Nome <span style="color: red;">*</span> </label>
+                                    <label for="newUserName">Nome <span class="required-sign">*</span> </label>
                                     <input type="text" class="form-control modal-input" name="newUserName" id="newUserName" placeholder="Marcos da Silva de Lemos, Família Silva, etc" required>
                                 </div>
 
                                 <div class="mb-3 col-sm-6 d-flex flex-column">
-                                    <label for="newUserEmail">Email <span style="color: red;">*</span> </label>
+                                    <label for="newUserEmail">Email <span class="required-sign">*</span> </label>
                                     <input type="email" class="form-control modal-input" name="newUserEmail" id="newUserEmail" placeholder="marcosdasilva4@outlook.com" required>
                                 </div>
 
                                 <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Senha <span style="color: red;">*</span> </label>
+                                    <label for="newUserPassword">Senha <span class="required-sign">*</span> </label>
                                     <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha12345" required>
                                 </div>
                             </div>
@@ -105,32 +106,27 @@
         <!-- #endregion MODAL DE ADICIONAR USUÁRIO -->
 
         <!-- #region MODAL DE ATUALIZAR SENHA DO USUÁRIO -->
-        <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="updatePasswordModal" tabindex="-1" aria-labelledby="updatePasswordModal" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addUserModalTitle">ATUALIZAR SENHA DO USUÁRIO</h5>
+                        <h5 class="modal-title" id="updatePasswordModalTitle">ATUALIZAR SENHA DO USUÁRIO</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="../actions/atualizar-senha-usuario.php" method="POST">
                             <div class="row">
                                 <div class="mb-3 col-sm-12 d-flex flex-column">
-                                    <label for="newUserName">Nome <span style="color: red;">*</span> </label>
-                                    <input type="text" class="form-control modal-input" name="newUserName" id="newUserName" placeholder="Nome da conta que quer alterar a senha" required>
-                                </div>
-
-                                <div class="mb-3 col-sm-6 d-flex flex-column">
-                                    <label for="newUserEmail">Email <span style="color: red;">*</span> </label>
-                                    <input type="email" class="form-control modal-input" name="newUserEmail" id="newUserEmail" placeholder="Nome da conta que quer alterar a senha" required>
+                                    <label for="newUserEmail">Email <span class="required-sign">*</span> </label>
+                                    <input type="email" class="form-control modal-input w-50" name="newUserEmail" id="newUserEmail" placeholder="Nome da conta que quer alterar a senha" required>
                                 </div>
 
                                 <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Senha <span style="color: red;">*</span> </label>
+                                    <label for="newUserPassword">Senha <span class="required-sign">*</span> </label>
                                     <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha antiga" required>
                                 </div>
                                 <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Nova senha</label>
+                                    <label for="newUserPassword">Nova senha <span class="required-sign">*</span> </label>
                                     <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha nova" required>
                                 </div>
                             </div>

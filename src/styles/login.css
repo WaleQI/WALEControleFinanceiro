@@ -1,15 +1,24 @@
 /* #region VARIÁVEIS */
 :root {
+    /* Cores de fundo */
+    --dark-details: #15162f;            /* Letras e detalhes mais escuros */
+    --main-bg: #222130;                 /* Principal cor de background, usada na maior parte do projeto */
+    --lighter-background: #333143;      /* Cor mais clara para background, detalhes ou diferenciação */
+    --lighter-plus: #444356;            /* Cor ainda mais clara, para ênfase, detalhes ou diferenciação */
+    
     /* Cores principais */
-    --main-bg: #222130;
-    --main-color: #ebd705;
+    --main-color: #ffd957;              /* Cor principal do projeto, usada em maior parte dos componentes e cores */
+    --main-details-color: #ebd705;      /* Cor principal mais vívida, usada para diferenciação ou estilo específico */
 
     /* Cores de componentes */
     --light-input-color: #ecedee;
-    --cancel-button:  #e53935;
+    --red-component:  #e53935;         /* Usada em componentes vermelhos */
+    --green-component: #08af25;        /* Usada em componentes verdes */
 
-    /* Textos */
-    --font: 'Quicksand', sans-serif;
+    --alternative-green: #14c870;       /* Cor alternativa para o verde */
+
+    /* Fonte */
+    --main-font: 'Quicksand', sans-serif;
 }
 /* #endregion VARIÁVEIS */
 
@@ -18,7 +27,7 @@
     margin: 0;
     padding: 0;
 
-    font-family: var(--font)
+    font-family: var(--main-font)
 }
 
 body {
@@ -69,7 +78,7 @@ body {
 
 /* #endregion LOGIN CARD */
 
-/* #region MODAL ADD USERS */
+/* #region MODAIS */
 .modal-content {
     background-color:  #222130;
     color: #fff;
@@ -80,7 +89,7 @@ body {
 }
 
 .modal .modal-cancel-btn {
-    background-color: var(--cancel-button);
+    background-color: var(--red-component);
     letter-spacing: 2px;
     color: #150825;
 }
@@ -91,13 +100,15 @@ body {
 }
 
 .modal-input {
-    background-color: #222130;
+    background-color: var(--main-bg);
     color: #fff;
     box-shadow: 2px 2px 3px 3px #0504113f inset;
     border-color: #0706183f;
 }
 .modal-input:focus {
-    background-color: #444256;
+    background-color: var(--lighter-plus);
     color: #fff;
 }
-/* #endregion MODAL ADD USERS */
+
+.required-sign { color: var(--red-component); }
+/* #endregion MODAIS */
