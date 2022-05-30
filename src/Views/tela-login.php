@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,18 +116,23 @@
                     <div class="modal-body">
                         <form action="../actions/atualizar-senha-usuario.php" method="POST">
                             <div class="row">
-                                <div class="mb-3 col-sm-12 d-flex flex-column">
-                                    <label for="newUserEmail">Email <span class="required-sign">*</span> </label>
-                                    <input type="email" class="form-control modal-input w-50" name="newUserEmail" id="newUserEmail" placeholder="Nome da conta que quer alterar a senha" required>
+                                <div class="my-3 col-6 d-flex flex-column">
+                                    <label for="inputUpdateName">Nome <span class="required-sign">*</span> </label>
+                                    <input type="text" class="form-control modal-input" name="inputUpdateName" id="inputUpdateName" placeholder="Nome da conta que deseja alterar a senha" required>
                                 </div>
 
-                                <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Senha <span class="required-sign">*</span> </label>
-                                    <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha antiga" required>
+                                <div class="my-3 col-6 d-flex flex-column">
+                                    <label for="inputUpdateEmail">Email <span class="required-sign">*</span> </label>
+                                    <input type="email" class="form-control modal-input" name="inputUpdateEmail" id="inputUpdateEmail" placeholder="Email da conta que deseja alterar a senha" required>
                                 </div>
-                                <div class="mb-3 col-6">
-                                    <label for="newUserPassword">Nova senha <span class="required-sign">*</span> </label>
-                                    <input type="password" class="form-control modal-input" name="newUserPassword" id="newUserPassword" placeholder="Senha nova" required>
+
+                                <div class="my-3 col-6">
+                                    <label for="inputUpdateOldPsw">Senha <span class="required-sign">*</span> </label>
+                                    <input type="password" class="form-control modal-input" name="inputUpdateOldPsw" id="inputUpdateOldPsw" placeholder="Senha antiga" required>
+                                </div>
+                                <div class="my-3 col-6">
+                                    <label for="inputUpdateNewPsw">Nova senha <span class="required-sign">*</span> </label>
+                                    <input type="password" class="form-control modal-input" name="inputUpdateNewPsw" id="inputUpdateNewPsw" placeholder="Senha nova" required>
                                 </div>
                             </div>
 

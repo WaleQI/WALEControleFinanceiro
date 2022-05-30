@@ -1,44 +1,9 @@
-/* #region VARIÁVEIS */
-:root {
-    /* Cores de fundo */
-    --dark-details: #15162f;            /* Letras e detalhes mais escuros */
-    --main-bg: #222130;                 /* Principal cor de background, usada na maior parte do projeto */
-    --lighter-background: #333143;      /* Cor mais clara para background, detalhes ou diferenciação */
-    --lighter-plus: #444356;            /* Cor ainda mais clara, para ênfase, detalhes ou diferenciação */
-    
-    /* Cores principais */
-    --main-color: #ffd957;              /* Cor principal do projeto, usada em maior parte dos componentes e cores */
-    --main-details-color: #ebd705;      /* Cor principal mais vívida, usada para diferenciação ou estilo específico */
+/* #region IMPORT */
+@import url('style.css');
+/* #endregion IMPORT */
 
-    /* Cores de componentes */
-    --light-input-color: #ecedee;
-    --red-component:  #e53935;         /* Usada em componentes vermelhos */
-    --green-component: #08af25;        /* Usada em componentes verdes */
 
-    --alternative-green: #14c870;       /* Cor alternativa para o verde */
-
-    /* Fonte */
-    --main-font: 'Quicksand', sans-serif;
-}
-/* #endregion VARIÁVEIS */
-
-* {
-    box-sizing:  border-box;
-    margin: 0;
-    padding: 0;
-
-    font-family: var(--main-font)
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-
-    overflow-x: hidden;
-    color: #FFF;
-    background-color: var(--main-bg);
-}
-
+/* #region BODY CONTENT */
 .left-column {
     background-image: url('../assets/stage-financial-planning.jpg');
     background-size: cover;
@@ -75,8 +40,10 @@ body {
 .forgot-password-text:hover { color: #fff695; }
 /* #endregion ACTION BUTTONS */
 
-
 /* #endregion LOGIN CARD */
+
+/* #endregion BODY CONTENT */
+
 
 /* #region MODAIS */
 .modal-content {

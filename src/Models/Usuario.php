@@ -3,8 +3,6 @@
 namespace Models\Data;
 
 // IMPORTS
-
-use Generator;
 use Models\Utils\Generators;
 use PDOException;
 require_once "../../config.php";
@@ -46,7 +44,7 @@ class Usuario {
             echo $data['IS_ACTIVE'] . '<br>';
 
             // Cria-se uma sessão para o usuário
-            $_SESSION['ID_User'] = $data['USUARIOID'];
+            $_SESSION['user-data'] = $data;
             return true;
         }
         else {
@@ -54,6 +52,7 @@ class Usuario {
             return false;
         }
     }
+
 
     public function SignIn($nome, $email, $password) {
         global $pdo;
@@ -72,11 +71,11 @@ class Usuario {
 
             // Verificação dos geradores para que caso um não funcione,
             // haverá uma segunda opção.
-            if (!empty($guid1) || $guid1 != null) {
-                $query->bindValue("usuarioid", strtoupper($guid1));
+            if (!empty($guid1) && $guid1 != null) {
+                $query->bindValue("usuarioid", $guid1);
             }
             else {
-                $query->bindValue("usuarioid", strtoupper($guid2));
+                $query->bindValue("usuarioid", $guid2);
             }
 
             $query->bindValue("nome", $nome);
@@ -93,10 +92,53 @@ class Usuario {
         }
     }
 
+
+    public function ForgotPassword($nome, $email, $senhaAntiga, $senhaNova) {
+        global $pdo;
+
+        try {
+            $selectQuery = "SELECT * FROM usuario
+                            WHERE NOME = :nome AND
+                                  EMAIL = :email AND
+                                  SENHA = :senhaAntiga";
+            
+            $selectQuery = $pdo->prepare($selectQuery);
+
+            $selectQuery->bindValue("nome", $nome);
+            $selectQuery->bindValue("email", $email);
+            $selectQuery->bindValue("senhaAntiga", $senhaAntiga);
+
+            $selectQuery->execute();
+
+
+            if ($selectQuery->rowCount() > 0) {
+                $updateQuery = "UPDATE usuario
+                                SET SENHA = :senhaNova
+                                WHERE NOME = :nome AND
+                                EMAIL = :email AND
+                                SENHA = :senhaAntiga";
+                
+                $updateQuery = $pdo->prepare($updateQuery);
+
+                $updateQuery->bindValue("senhaNova", $senhaNova);
+                $updateQuery->bindValue("nome", $nome);
+                $updateQuery->bindValue("email", $email);
+                $updateQuery->bindValue("senhaAntiga", $senhaAntiga);
+
+                $updateQuery->execute();
+            }
+        }
+        catch(PDOException $ex) {
+            var_dump($ex);
+            return false;
+        }
+    }
+
     #endregion PUBLIC METHODS
 
-    #region PRIVATE METHODS
 
+    #region PRIVATE METHODS
+    // [. . .]
     #endregion PRIVATE METHODS
 
 }

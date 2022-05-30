@@ -1,0 +1,104 @@
+/* #region IMPORT */
+@import url('style.css');
+/* #endregion IMPORT */
+
+
+/* #region GENERAL */
+body {
+    color: #f5e077;
+    font-family: var(--comfortaa-font);
+}
+/* #endregion GENERAL */
+
+
+/* #region HEADER */
+.header {
+    height: 20%;
+    border-bottom: 1px solid #333143;
+}
+
+.header-area {}
+
+.header-title-content {
+    padding: 10px;
+}
+
+.logo-image {
+    margin-right: 5px;
+}
+
+.name-content {
+    margin-left: 5px;
+
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-shadow: -5px 5px #15162f;
+}
+
+
+.header-options-content {
+    height: 100%;
+    width: fit-content;
+    justify-self: center;
+}
+.header-menu-option {
+    height: 35px;
+    color: var(--main-color);
+    text-shadow: 0 3px #15162f;
+
+    transition: all .5s;
+}
+.header-menu-option:hover {
+    color: var(--main-color);
+    background-color: #333143;
+    border-radius: 8px;
+}
+
+.header-menu-option.active-menu-option {
+    color: var(--main-color);
+    background-color: #333143;
+    border-radius: 8px;
+}
+
+.header-profile-content {
+    height: 100%;
+    width: 100px;
+    display: grid;
+    place-items: center;
+}
+.profile-option > img {
+    height: 50px;
+    width: 50px;
+
+    box-shadow: 3px 3px #15162f;
+    transition: all .5s;
+}
+.profile-option > img:hover {
+    transform: scale(1.1);
+
+    box-shadow: 4px 4px #15162f;
+}
+/* #endregion HEADER */
+
+
+/* #region BODY */
+.body-content {
+    height: 80%;
+}
+
+.main-wrapper {
+    background-color: #333143;
+    width: 90%;
+    height: 90%;
+
+    overflow-y: scroll;
+
+    border: 1px solid #333143;
+    border-radius: 8px;
+}
+/* #endregion BODY */
+
+
+/* #region MODAIS */
+/* [. . .] */
+/* #endregion MODAIS */
