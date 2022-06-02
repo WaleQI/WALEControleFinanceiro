@@ -14,6 +14,19 @@ body {
     background-color: #333143;
     border-radius: 8px;
 }
+
+.dark-input {
+    background-color: var(--main-bg);
+    color: #fff;
+    box-shadow: 2px 2px 3px 3px #0504113f inset;
+    border-color: #0706183f;
+}
+.dark-input:focus {
+    background-color: var(--lighter-plus);
+    color: #fff;
+}
+
+.required-sign { color: #e53935; }
 /* #endregion GERAL */
 
 
@@ -115,9 +128,54 @@ body {
 /* #endregion FILTROS */
 
 
+/* #region MAIN */
+.title-container {
+    border-bottom: 1px solid #444356;
+}
+
+.new-record-btn {
+    background-color: var(--main-color);
+    letter-spacing: 2px;
+    color: #150825;
+}
+
+.custom-table {
+    border-color: #444356;
+}
+
+.table-header-row {
+    background-color: #444356;
+    color: var(--main-color);
+}
+
+.table-content-row {
+    color: #fff;
+}
+
+.green-color { color: #08af25; }
+.red-color { color: #e53935; }
+
+.pagination {
+    background-color: #444356;
+}
+/* #endregion MAIN */
+
 /* #endregion BODY */
 
 
 /* #region MODAIS */
-/* [. . .] */
+.modal-content {
+    background-color: #222130;
+}
+
+.modal .modal-cancel-btn {
+    background-color: var(--red-component);
+    letter-spacing: 2px;
+    color: #150825;
+}
+.modal .modal-save-btn {
+    background-color: var(--main-color);
+    letter-spacing: 2px;
+    color: #150825;
+}
 /* #endregion MODAIS */

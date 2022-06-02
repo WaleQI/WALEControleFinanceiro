@@ -6,6 +6,9 @@ require_once '../../vendor/autoload.php';
 // Iniciamos a SESSION para poder usar seus dados que foram inseridos na página anterior
 session_start();
 
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,7 @@ session_start();
     <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../styles/home.css">
-    <?php echo '<title>' . $_SESSION['profile-data']['NOME'] . ' | Registros' . '</title>'; ?>
+    <?php echo '<title>' . $_SESSION['user-data']['NOME'] . ' | Registros' . '</title>'; ?>
 </head>
     <body>
 
@@ -87,18 +90,118 @@ session_start();
                             </div>
                             <div class="action-btn">
                                 <button type="submit" class="btn fw-bold">FILTRAR</button>
+                                <button type="button" class="btn fw-bold" onclick="">LIMPAR</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="main-container col-9 p-0">
-                <div class="main-container-content w-100 h-100 p-3">
+            <div class="main-container h-100 col-9 ps-0">
+                <div class="main-container-content w-100 h-100 p-3 d-flex flex-column">
+                    <div class="title-container mb-3 d-flex flex-row align-items-center justify-content-between">
+                        <h4>REGISTROS</h4>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#newRecordModal"> <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd957" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg> </button>
+                    </div>
 
+                    <div class="table-container mt-3">
+                        <table class="custom-table table table-bordered table-hover">
+                            <tr class="table-header-row">
+                                <th class="table-header">Descrição</th>
+                                <th class="table-header">Responsável</th>
+                                <th class="table-header">Valor</th>
+                                <th class="table-header">Data</th>
+                                <th class="table-header">Tipo</th>
+                            </tr>
+
+                            <tr class="table-content-row">
+                                <td class="table-row">Venda de roupas</td>
+                                <?php echo "<td class='table-row'>" . $_SESSION['user-data']['NOME'] . "</td>"; ?>
+                                <td class="table-row"> <span class="green-color">+R$</span> 127,89 </td>
+                                <td class="table-row">28/03/2022</td>
+                                <td class="table-row">ENTRADA</td>
+                            </tr>
+                            <tr class="table-content-row">
+                                <td class="table-row">Compras no shopping</td>
+                                <?php echo "<td class='table-row'>" . $_SESSION['user-data']['NOME'] . "</td>"; ?>
+                                <td class="table-row"> <span class="red-color">-R$</span> 278,90 </td>
+                                <td class="table-row">05/02/2022</td>
+                                <td class="table-row">SAÍDA</td>
+                            </tr>
+                            <tr class="table-content-row">
+                                <td class="table-row">Compras de peças</td>
+                                <?php echo "<td class='table-row'>" . $_SESSION['user-data']['NOME'] . "</td>"; ?>
+                                <td class="table-row"> <span class="red-color">-R$</span> 492,52 </td>
+                                <td class="table-row">19/02/2022</td>
+                                <td class="table-row">SAÍDA</td>
+                            </tr>
+                            <tr class="table-content-row">
+                                <td class="table-row">Venda de peças restauradas</td>
+                                <?php echo "<td class='table-row'>" . $_SESSION['user-data']['NOME'] . "</td>"; ?>
+                                <td class="table-row"> <span class="green-color">+R$</span> 954,78 </td>
+                                <td class="table-row">15/01/2022</td>
+                                <td class="table-row">ENTRADA</td>
+                            </tr>
+                        </table>
+
+                        <div class="pagination-container d-flex align-items-center justify-content-end">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- #region MODAL DE ADICIONAR REGISTRO -->
+        <div class="modal fade" id="newRecordModal" tabindex="-1" aria-labelledby="newRecordModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="newRecordModalTitle">CADASTRAR USUÁRIO</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="tela-registros.php" method="POST">
+                            <div class="row">
+                                <div class="mb-3 col-sm-12 d-flex flex-column">
+                                    <label for="recordDescricao">Descrição <span class="required-sign">*</span> </label>
+                                    <input type="text" class="form-control dark-input" name="recordDescricao" id="recordDescricao" placeholder="Uma descrição de identificação" required>
+                                </div>
+
+                                <div class="mb-3 col-sm-6 d-flex flex-column">
+                                    <label for="recordValor">Valor <span class="required-sign">*</span> </label>
+                                    <input type="number" class="form-control dark-input" name="recordValor" id="recordValor" placeholder="Valor da transação" required>
+                                </div>
+
+                                <div class="mb-3 col-sm-6 d-flex flex-column">
+                                    <label for="recordDataHora">Data e Hora <span class="required-sign">*</span> </label>
+                                    <input type="datetime-local" class="form-control dark-input" name="recordDataHora" id="recordDataHora" placeholder="Data e Hora da transação" required>
+                                </div>
+
+                                <div class="mb-3 col-sm-6 d-flex flex-column">
+                                    <label for="recordTipo">Data e Hora <span class="required-sign">*</span> </label>
+                                    <select class="form-select dark-input" name="recordTipo" id="recordTipo">
+                                        <option value=null>Selecione o tipo da transação</option>
+                                        <option value="Entrada">Entrada</option>
+                                        <option value="Saída">Saída</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn modal-cancel-btn fw-bold" data-bs-dismiss="modal">CANCELAR</button>
+                                <button type="submit" class="btn modal-save-btn fw-bold">REGISTRAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- #endregion MODAL DE ADICIONAR REGISTRO -->
+
+        <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="../../vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 
     </body>
 </html>
