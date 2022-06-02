@@ -16,7 +16,7 @@ body {
     height: 20%;
 }
 
-.header-area {}
+/* .header-area { } */
 
 .header-content {
     padding: 10px;
@@ -86,10 +86,6 @@ body {
     height: 12%;
 }
 
-
-.profiles-info {
-    /* border-left: 1px solid #333143; */
-}
 /* #endregion BODY */
 
 

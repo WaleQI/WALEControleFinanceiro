@@ -23,6 +23,15 @@
 }
 /* #endregion VARIÁVEIS */
 
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--main-details-color); }
+::-webkit-scrollbar-track { background-color: var(--dark-details); }
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 2px;
+}
+
+
 * {
     box-sizing:  border-box;
     margin: 0;

@@ -25,7 +25,7 @@
                 <div class="login-card row w-75 px-2 d-flex flex-column align-items-center justify-content-center">
                     <h1 class="login-card-title col-12 text-center m-0 fw-bold">LOGIN</h1>
                     <form class="mt-3 px-0" action="../actions/login-usuario.php" method="POST">
-                        <div class="">
+                        <div>
                             <div class="col-12 mb-3">
                                 <label for="inputUserEmail">Email</label>
                                 <input type="email" name="inputUserEmail" id="inputUserName" class="form-control" placeholder="Digite seu email">

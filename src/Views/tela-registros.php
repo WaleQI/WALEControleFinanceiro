@@ -39,9 +39,9 @@ session_start();
                 </div>
 
                 <div class="header-options-content d-flex align-items-center">
-                    <a href="tela-inicio.php" class="mx-2 p-2 text-decoration-none header-menu-option">INÍCIO</a>
-                    <a href="tela-registros.php" class="mx-2 p-2 text-decoration-none header-menu-option active-menu-option">REGISTROS</a>
-                    <a href="tela-previsoes.php" class="mx-2 p-2 text-decoration-none header-menu-option">PREVISÕES</a>
+                    <a href="tela-inicio.php" class="mx-2 p-2 text-decoration-none header-option">INÍCIO</a>
+                    <a href="tela-registros.php" class="mx-2 p-2 text-decoration-none header-option active-option">REGISTROS</a>
+                    <a href="tela-previsoes.php" class="mx-2 p-2 text-decoration-none header-option">PREVISÕES</a>
                 </div>
 
                 <div class="header-profile-content">
@@ -50,9 +50,53 @@ session_start();
             </div>
         </header>
 
-        <div class="body-content d-flex align-items-center justify-content-center">
-            <div class="main-wrapper">
+        <div class="body-content row d-flex align-items-center justify-content-center">
+            <div class="side-menu col-3 h-100 pe-0">
+                <div class="side-menu-content w-100 h-100 p-3 d-flex flex-column align-items-center justify-content-start">
+                    <div class="menu-filters w-100 h-100 d-flex flex-column">
+                        <form action="tela-registros.php" method="POST">
+                            <div class="inputs">
+                                <div class="col-12 mb-3">
+                                    <label for="filterDescricao">Descrição</label>
+                                    <input type="text" name="filterDescricao" id="filterDescricao" class="form-control dark-input" placeholder="Filtre pela descrição">
+                                </div>
 
+                                <div class="col-12 mb-3">
+                                    <label for="filterResp">Responsável</label>
+                                    <input type="text" name="filterResp" id="filterResp" class="form-control dark-input" placeholder="Filtre pelo responsável">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="filterValor">Valor</label>
+                                    <input type="number" name="filterValor" id="filterValor" class="form-control dark-input" placeholder="Filtre pelo valor">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="filterDT">Data/Hora</label>
+                                    <input type="datetime-local" name="filterDT" id="filterDT" class="form-control dark-input" placeholder="Filtre pela data e hora">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="filterTipo">Tipo de registro</label>
+                                    <select class="form-select dark-input" aria-label="Entrada ou Saída">
+                                        <option value=null>-- Selecione o tipo de registro</option>
+                                        <option value="entradas">Entradas</option>
+                                        <option value="saidas">Saídas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="action-btn">
+                                <button type="submit" class="btn fw-bold">FILTRAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-container col-9 p-0">
+                <div class="main-container-content w-100 h-100 p-3">
+
+                </div>
             </div>
         </div>
 

@@ -3,12 +3,18 @@
 /* #endregion IMPORT */
 
 
-/* #region GENERAL */
+/* #region GERAL */
 body {
     color: #f5e077;
     font-family: var(--comfortaa-font);
 }
-/* #endregion GENERAL */
+
+.active-option {
+    color: var(--main-color);
+    background-color: #333143;
+    border-radius: 8px;
+}
+/* #endregion GERAL */
 
 
 /* #region HEADER */
@@ -16,8 +22,6 @@ body {
     height: 20%;
     border-bottom: 1px solid #333143;
 }
-
-.header-area {}
 
 .header-title-content {
     padding: 10px;
@@ -41,24 +45,19 @@ body {
     width: fit-content;
     justify-self: center;
 }
-.header-menu-option {
+.header-option {
     height: 35px;
     color: var(--main-color);
     text-shadow: 0 3px #15162f;
 
     transition: all .5s;
 }
-.header-menu-option:hover {
+.header-option:hover {
     color: var(--main-color);
     background-color: #333143;
     border-radius: 8px;
 }
 
-.header-menu-option.active-menu-option {
-    color: var(--main-color);
-    background-color: #333143;
-    border-radius: 8px;
-}
 
 .header-profile-content {
     height: 100%;
@@ -84,18 +83,38 @@ body {
 /* #region BODY */
 .body-content {
     height: 80%;
-}
-
-.main-wrapper {
     background-color: #333143;
-    width: 90%;
-    height: 90%;
-
-    overflow-y: scroll;
-
-    border: 1px solid #333143;
-    border-radius: 8px;
 }
+
+.side-menu {
+    background-color: #222130;
+    display: grid;
+    place-items: center;
+}
+
+
+/* #region FILTROS */
+
+.action-btn button {
+    background-color: var(--main-color);
+    letter-spacing: 2px;
+    color: #150825;
+}
+
+.dark-input {
+    background-color: var(--main-bg);
+    color: #fff;
+    box-shadow: 2px 2px 3px 3px #0504113f inset;
+    border-color: #0706183f;
+}
+.dark-input:focus {
+    background-color: var(--lighter-plus);
+    color: #fff;
+}
+
+/* #endregion FILTROS */
+
+
 /* #endregion BODY */
 
 
